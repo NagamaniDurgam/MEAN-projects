@@ -1,0 +1,15 @@
+<p>
+  getuser works!
+</p>
+<form #myForm="ngForm" id="myForm" (ngSubmit)="register(myForm)" novalidate>
+    <p>Is "myForm" valid? {{myForm.valid}}</p>
+
+  <div >
+    <label>User Name / Email Address</label>
+    <input type="text" #username="ngModel" name="username"  ngModel required/>
+    <show-errors [control]="username"></show-errors>
+
+  </div>
+  <button type="submit" (click)="myForm.control.markAsTouched()">Register</button>
+  
+</form>

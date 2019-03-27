@@ -1,0 +1,47 @@
+<app-header></app-header>
+<nav class="navbar navbar-dark bg-dark mb-5">
+   
+       <!-- <a class="navbar-brand" href="#">Navbar</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="navbar-expand mr-auto">
+        <div class=" navbar-nav"> 
+              <a class="nav-item nav-link active" routerLink="home">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" routerLink="about">About</a> 
+              <a class="nav-item nav-link" routerLink="services">Services</a>
+        </div>
+        </div>
+        <div class="navbar-expand ml-auto navbar-nav">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link" href="https://github.com/beeman" target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a>
+                  <a class="nav-item nav-link" href="https://twitter.com/beeman_nl" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a class="nav-item nav-link" href="https://medium.com/@beeman" target="_blank">
+                    <i class="fa fa-medium"></i>
+                  </a>
+                </div>
+        </div>
+      </nav>
+    
+<router-outlet>
+  <span>
+    <div *ngIf="LOAD_SPINNER">
+      <div class="loading">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+    </div>
+  </span>
+</router-outlet>
+
+<app-footer></app-footer>
+
+
+
